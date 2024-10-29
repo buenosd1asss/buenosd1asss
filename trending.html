@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OtirikTube - Film Watch Platform</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="header" class="bg-dark text-white p-3">
+    <div class="container">
+      <h1>OtirikTube</h1>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">OtirikTube</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#trending" class="nav-link">Trending</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contactSection" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" id="openPopup" class="nav-link" data-toggle="modal" data-target="#subscribeModal">Subscribe</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content" class="container mt-4">
+    <section id="trending">
+      <h2 class="section-heading">Trending Movies</h2>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <div class="card">
+            <img src="deadpool3jpg.jpg" class="card-img-top" alt="Deadpool & Wolverine">
+            <div class="card-body">
+              <h5 class="card-title">Deadpool & Wolverine</h5>
+              <a href="#" class="btn btn-primary">Watch Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <div class="card">
+            <img src="poa.jpg" class="card-img-top" alt="Planet of the Apes">
+            <div class="card-body">
+              <h5 class="card-title">Planet of the Apes</h5>
+              <a href="#" class="btn btn-primary">Watch Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <div class="card">
+            <img src="garfield-2024-film-poster.avif" class="card-img-top" alt="Garfield">
+            <div class="card-body">
+              <h5 class="card-title">Garfield</h5>
+              <a href="#" class="btn btn-primary">Watch Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <div class="card">
+            <img src="OIP.jpg" class="card-img-top" alt="Bad Boys IV">
+            <div class="card-body">
+              <h5 class="card-title">Bad Boys IV</h5>
+              <a href="#" class="btn btn-primary">Watch Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeDisplaySection" class="my-5">
+      <h2>Select a City</h2>
+      <select id="citySelect" class="form-control mb-3">
+        <option value="Europe/Moscow">Moscow</option>
+        <option value="America/New_York">New York</option>
+        <option value="Asia/Almaty">Astana</option>
+        <option value="Asia/Aqtau">Aktau</option>
+      </select>
+      <div id="timeDisplay" class="display-4 mb-3">Time will display here.</div> 
+      <button id="showTimeBtn" class="btn btn-primary">Show Current Time</button> 
+    </section>
+
+    
+    <section id="changeBg" class="my-5 text-center">
+      <h2 id="themeStatus">Current Theme: Dark</h2> 
+      <button id="changeColorBtn" class="btn btn-secondary">Light Theme</button> 
+    </section>
+    
+
+    
+    <section id="dateTime" class="my-5 text-center">
+      <h2>Current Date and Time</h2>
+      <div id="dateTimeDisplay" class="display-4"></div>
+    </section>
+
+    
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Collapsible Group Item #1
+            </button>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Collapsible Group Item #2
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Collapsible Group Item #3
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <section id="contactSection" class="my-5">
+      <h2 class="section-heading">Contact Us</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="contactEmail">Email:</label>
+          <input type="email" id="contactEmail" name="email" class="form-control" required>
+          <small id="contactEmailError" class="form-text text-danger"></small>
+        </div>
+        <div class="form-group">
+          <label for="contactPassword">Password:</label>
+          <input type="password" id="contactPassword" name="password" class="form-control" required>
+          <small id="contactPasswordError" class="form-text text-danger"></small>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required>
+          <small id="confirmPasswordError" class="form-text text-danger"></small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+    <section id="playSound" class="my-5 text-center">
+      <h2 id="playsound1">Play random sounds that i added here cuz it was fun</h2>
+      <button id="playSoundBtn" class="btn btn-success animated">play</button> 
+    </section>
+  </main>
+
+  
+  <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="subscribeModalLabel">Subscribe to OtirikTube</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="subscribeForm">
+            <div class="form-group">
+              <label for="subscribeEmail">Email address</label>
+              <input type="email" class="form-control" id="subscribeEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+              <small id="subscribeEmailError" class="form-text text-danger"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <footer id="footer" class="bg-dark text-white text-center p-3">
+    <p>Made by Omar Dias SE-2328</p>
+  </footer>
+  <audio id="sound1" src="C:\Users\Dias\Downloads\SOUND EFFECTVALORANTSovaI am the HunterHD.mp3" preload="auto" ></audio>
+  <audio id="sound2" src="C:\Users\Dias\Downloads\bingo bango bongo bish bash bosh.mp3" preload="auto"></audio>
+  <audio id="sound3" src="C:\Users\Dias\Downloads\Gekko Oye Monster On The Loose Sound Effect.mp3" preload="auto"></audio>
+  <audio id="sound4" src="C:\Users\Dias\Downloads\you want to play lets play.mp3" preload="auto"></audio>
+  <audio id="sound5" src="C:\Users\Dias\Downloads\ahhh anime girl sound effect.mp3" preload="auto"></audio>
+  <audio id="sound6" src="C:\Users\Dias\Downloads\Welcome To My World Viper Voice Line.mp3" preload="auto"></audio>  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
